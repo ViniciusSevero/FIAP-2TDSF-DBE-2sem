@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="_template.xhtml">
+		<ui:define name="conteudo">
+			<h:form>
+				<h:panelGrid columns="3">
+					<p:outputLabel value="Nome" for="nome"/>
+					<p:autoComplete value="#{listaAlunoBean.nome}" id="nome" completeMethod="#{listaAlunoBean.buscarPorNome()}" />
+					<p:commandButton action="#{listaAlunoBean.buscarPorNome()}" value="Buscar" update="tabela"/>
+				</h:panelGrid>
+			</h:form>
+			<p:dataTable value="#{listaAlunoBean.alunos}" var="aluno" paginator="true" rows="2" paginatorPosition="bottom" id="tabela">
+				<p:column headerText="RM">
+				    #{aluno.rm}
+				</p:column>
+				<p:column headerText="Nome">
+				    #{aluno.nome}
+				</p:column>
+				<p:column headerText="CPF">
+				    #{aluno.cpf}
+				</p:column>
+				<p:column headerText="Data de Nascimento">
+				    <h:outputText value="#{aluno.dataNascimento.time}">
+						<f:convertDateTime pattern="dd/MM/yyyy" />
+					</h:outputText>
+				</p:column>
+				<p:column headerText="Email">
+				    #{aluno.email}
+				</p:column>
+				<p:column headerText="Rating">
+				    <p:rating value="#{aluno.rating}" id="rat" stars="10"/>
+				</p:column>
+			</p:dataTable>
+		</ui:define>
+	</ui:composition>
+
+</html>

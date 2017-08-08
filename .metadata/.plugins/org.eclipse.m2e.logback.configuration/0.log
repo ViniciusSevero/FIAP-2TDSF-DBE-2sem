@@ -1,0 +1,7 @@
+2017-08-08 08:22:32,316 [Start Help Server] INFO  org.eclipse.jetty.util.log - Logging initialized @61024ms
+2017-08-08 08:22:32,667 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-9.3.9.v20160517
+2017-08-08 08:22:32,777 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3c665d26{/help,null,AVAILABLE}
+2017-08-08 08:22:32,796 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started ServerConnector@2c5b3466{HTTP/1.1,[http/1.1]}{127.0.0.1:3774}
+2017-08-08 08:22:32,797 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started @61507ms
+2017-08-08 09:41:32,464 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/com/sun/faces/jsf-impl/2.2.14/jsf-impl-2.2.14-sources.jar
+2017-08-08 09:41:33,853 [Worker-41] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/com/sun/faces/jsf-impl/2.2.14/jsf-impl-2.2.14-sources.jar
