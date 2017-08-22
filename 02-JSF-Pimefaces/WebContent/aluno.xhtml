@@ -29,7 +29,19 @@
 					<p:outputLabel value="rating"/>
 					<p:rating value="#{aLunoBean.aluno.rating}" id="rat" stars="10"/>
 					
-					<p:commandButton action="#{aLunoBean.cadastrar()}" value="Cadastrar"/>
+					<p:graphicImage id="foto" cache="false" value="#{aLunoBean.imagem}" />
+					<p:outputLabel value="Foto"/>
+					<p:fileUpload
+						update="foto"
+						fileUploadListener="#{aLunoBean.uploadFile}"
+						sizeLimit="5000000"
+						allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+						auto="false"
+						dragDropSupport="false"
+					/>
+					
+					<p:commandButton  action="#{aLunoBean.cadastrar()}" value="Cadastrar"/>
+					<p:commandButton  action="#{aLunoBean.atualizar()}" value="Alterar"/>
 				</h:panelGrid>
 			</h:form>
 		</ui:define>

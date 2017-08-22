@@ -11,6 +11,10 @@ public interface AlunoDAO extends GenericDAO<Aluno, Integer>{
 	List<Aluno> buscarPorNome(String nome);
 
 	List<String> buscarPorNomeCliente(String nome);
+	
+	long contarPorRating(int inicio, int fim);
+	
+	long contarPorMes(int mes);
 
 
 }

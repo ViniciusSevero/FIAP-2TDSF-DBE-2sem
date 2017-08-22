@@ -1,0 +1,7 @@
+package br.com.fiap.bean;
+
+public class Unicornio {
+	private String nome;
+	private double altura;
+	private double peso;
+}

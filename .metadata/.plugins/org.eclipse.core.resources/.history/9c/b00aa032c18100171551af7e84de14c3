@@ -1,0 +1,40 @@
+package br.com.fiap.bean;
+
+import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
+
+import org.primefaces.model.chart.LineChartModel;
+import org.primefaces.model.chart.PieChartModel;
+
+import br.com.fiap.bo.AlunoBO;
+import br.com.fiap.dao.AlunoDAO;
+import br.com.fiap.dao.impl.AlunoDAOImpl;
+
+@ManagedBean
+public class GraficoBean {
+
+	private PieChartModel pizza;
+	private LineChartModel line;
+	private AlunoBO bo;
+	
+	@PostConstruct
+	private void init(){
+		bo = new AlunoBO();
+		pizza = new PieChartModel();
+		pizza.set("Otimo", bo.contarPorRating(0, 4));
+		pizza.set("Regular", bo.contarPorRating(5, 7));
+		pizza.set("rUIM", bo.contarPorRating(8, 10));
+		pizza.setShowDataLabels(true);
+		pizza.setLegendPosition("e");
+	}
+
+	public PieChartModel getPizza() {
+		return pizza;
+	}
+
+	public void setPizza(PieChartModel pizza) {
+		this.pizza = pizza;
+	}
+	
+	
+}

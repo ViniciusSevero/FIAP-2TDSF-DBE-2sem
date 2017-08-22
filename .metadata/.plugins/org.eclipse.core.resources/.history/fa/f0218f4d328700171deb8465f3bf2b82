@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition template="_template.xhtml">
+		<ui:define name="conteudo">
+			<p:messages/>
+			<p:growl/>
+			<h:form>
+				<h:panelGrid columns="2">
+					<p:outputLabel value="rm"/>
+					<p:inputText value="#{aLunoBean.aluno.rm}"/>
+					
+					<p:outputLabel value="nome"/>
+					<p:inputText value="#{aLunoBean.aluno.nome}"/>
+					
+					<p:outputLabel value="cpf"/>
+					<p:inputText value="#{aLunoBean.aluno.cpf}"/>
+					
+					<p:outputLabel value="dataNascimento"/>
+					<p:calendar value="#{aLunoBean.aluno.dataNascimento.time}" pattern="dd/MM/yyyy"/>
+					
+					<p:outputLabel value="email"/>
+					<p:inputText value="#{aLunoBean.aluno.email}"/>
+					
+					<p:outputLabel value="rating"/>
+					<p:rating value="#{aLunoBean.aluno.rating}" id="rat" stars="10"/>
+					
+					<p:outputLabel value="Foto"/>
+					<p:fileUpload
+						update="foto"
+						fileUploadListener="#{aLunoBean.uploadFile}"
+						sizeLimit="5000000"
+						allowTypes="/(\.|\/)(gif|jpe?g|png)$/"
+						auto="false"
+						dragDropSupport="false"
+					/>
+					
+					<p:commandButton  action="#{aLunoBean.cadastrar()}" value="Cadastrar"/>
+					<p:commandButton  action="#{aLunoBean.atualizar()}" value="Alterar"/>
+				</h:panelGrid>
+			</h:form>
+		</ui:define>
+	</ui:composition>
+
+</html>

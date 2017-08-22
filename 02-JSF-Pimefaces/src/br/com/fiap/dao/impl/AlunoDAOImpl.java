@@ -35,5 +35,20 @@ public class AlunoDAOImpl extends GenericDAOImpl<Aluno, Integer>
 						.setParameter("nome", "%"+nome+"%")
 						.getResultList();
 	}
+	
+	@Override
+	public long contarPorRating(int inicio, int fim) {
+		return em.createQuery("select count(a) from Aluno a where a.rating between :i and :f", Long.class)
+					.setParameter("i", inicio)
+					.setParameter("f", fim)
+					.getSingleResult();
+	}
+	
+	@Override
+	public long contarPorMes(int mes) {
+		return em.createQuery("select count(a) from Aluno a where month(a.dataNascimento) = :mes", Long.class)
+				.setParameter("mes", mes)
+				.getSingleResult();
+	}
 
 }

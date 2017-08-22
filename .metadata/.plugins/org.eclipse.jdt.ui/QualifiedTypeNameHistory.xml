@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.Calendar"/>
+<fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
+<fullyQualifiedTypeName name="br.com.fiap.exception.CommitErrorException"/>
+<fullyQualifiedTypeName name="com.sun.faces.config.processor.FacesConfigExtensionProcessor"/>
+<fullyQualifiedTypeName name="br.com.fiap.entity.Aluno"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.Init"/>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.PieChartModel"/>
+<fullyQualifiedTypeName name="javax.annotation.PostConstruct"/>
+<fullyQualifiedTypeName name="br.com.fiap.dao.AlunoDAO"/>
+<fullyQualifiedTypeName name="br.com.fiap.dao.impl.AlunoDAOImpl"/>
+<fullyQualifiedTypeName name="br.com.fiap.bo.AlunoBO"/>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.LineChartModel"/>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.AxisType"/>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.CategoryAxis"/>
+<fullyQualifiedTypeName name="org.primefaces.model.chart.LineChartSeries"/>
+<fullyQualifiedTypeName name="org.primefaces.event.FileUploadEvent"/>
+<fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="javax.faces.view.ViewScoped"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
+<fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+<fullyQualifiedTypeName name="org.primefaces.model.StreamedContent"/>
+<fullyQualifiedTypeName name="org.primefaces.model.DefaultStreamedContent"/>
+<fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.ByteArrayInputStream"/>
+<fullyQualifiedTypeName name="javax.persistence.Lob"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+</qualifiedTypeNameHistroy>

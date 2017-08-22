@@ -35,7 +35,21 @@
 				<p:column headerText="Rating">
 				    <p:rating value="#{aluno.rating}" id="rat" stars="10"/>
 				</p:column>
+				<p:column headerText="Editar">
+				    <p:commandButton value="Editar" action="aluno">
+				    	<f:setPropertyActionListener value="#{aluno}" target="#{aLunoBean.aluno}"></f:setPropertyActionListener>
+				    </p:commandButton>
+				</p:column>
+				<p:column headerText="Excluir" icon="ui-icon-trash">
+				    <p:commandButton onclick="PF('confirmation').show()" value="Excluir">
+				    	<f:setPropertyActionListener value="#{aluno.rm}" target="#{listaAlunoBean.rm}"></f:setPropertyActionListener>
+				    </p:commandButton>
+				</p:column>
 			</p:dataTable>
+			<p:confirmDialog widgetVar="confirmation" header="Confirme" message="Tem certeza?">
+				<p:commandButton value="Sim" oncomplete="PF('confirmation').hide()" action="#{listaAlunoBean.excluir}"/>
+				<p:commandButton value="Não" onclick="PF('confirmation').hide()"/>
+			</p:confirmDialog>
 		</ui:define>
 	</ui:composition>
 
