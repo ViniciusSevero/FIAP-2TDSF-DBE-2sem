@@ -115,8 +115,6 @@
   <path value="C:/opensource/ApacheTomcat9/lib/tomcat-coyote.jar"/>
  </paths>
  <validation>
-  <core validator-id="jsf-verification"/>
-  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="41" name="%0" offset="857" path="%1"/>
    <linked-el length="26" name="%0" offset="990" path="%1"/>
@@ -147,9 +145,9 @@
    <linked-el length="14" name="%3" offset="1948" path="%2"/>
    <linked-el length="41" name="%4" offset="857" path="%1"/>
    <linked-el length="20" name="%4" offset="1669" path="%2"/>
-   <linked-el length="27" name="%4" offset="1598" path="%1"/>
    <linked-el length="26" name="%4" offset="990" path="%1"/>
    <linked-el length="28" name="%4" offset="1086" path="%1"/>
+   <linked-el length="27" name="%4" offset="1598" path="%1"/>
    <linked-el length="22" name="%4" offset="1195" path="%1"/>
    <linked-el length="33" name="%4" offset="1323" path="%1"/>
    <linked-el length="24" name="%4" offset="753" path="%1"/>
@@ -166,9 +164,9 @@
    <linked-el length="41" name="%7" offset="600" path="%2"/>
    <linked-el length="41" name="%8" offset="857" path="%1"/>
    <linked-el length="20" name="%8" offset="1669" path="%2"/>
-   <linked-el length="27" name="%8" offset="1598" path="%1"/>
    <linked-el length="26" name="%8" offset="990" path="%1"/>
    <linked-el length="28" name="%8" offset="1086" path="%1"/>
+   <linked-el length="27" name="%8" offset="1598" path="%1"/>
    <linked-el length="22" name="%8" offset="1195" path="%1"/>
    <linked-el length="33" name="%8" offset="1323" path="%1"/>
    <linked-el length="24" name="%8" offset="753" path="%1"/>
