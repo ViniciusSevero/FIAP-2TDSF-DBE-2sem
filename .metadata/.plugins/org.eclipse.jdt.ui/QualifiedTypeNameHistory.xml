@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="br.com.fiap.exception.CommitErrorException"/>
 <fullyQualifiedTypeName name="com.sun.faces.config.processor.FacesConfigExtensionProcessor"/>
 <fullyQualifiedTypeName name="br.com.fiap.entity.Aluno"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.xml.internal.security.Init"/>
@@ -33,10 +32,15 @@
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="br.com.fiap.bean.Unicornio"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 <fullyQualifiedTypeName name="br.com.fiap.bean.Time"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+<fullyQualifiedTypeName name="br.com.fiap.model.Boteco"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="br.com.fiap.model.BotecoDAO"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
 <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="br.com.fiap.bean.Boteco"/>
 </qualifiedTypeNameHistroy>

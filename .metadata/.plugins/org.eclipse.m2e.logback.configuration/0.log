@@ -2556,3 +2556,5 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 2017-08-29 11:43:34,995 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\FIAP-2TDSF-DBE-2sem\04-SpringBoteco\src\main\resources
 2017-08-29 11:43:34,996 [Worker-71] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-08-29 11:43:34,996 [Worker-71] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\FIAP-2TDSF-DBE-2sem\04-SpringBoteco\src\test\resources
+2017-08-29 11:44:58,355 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@597ba550{HTTP/1.1,[http/1.1]}{127.0.0.1:0}
+2017-08-29 11:44:58,376 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@3d98b83e{/help,null,UNAVAILABLE}
