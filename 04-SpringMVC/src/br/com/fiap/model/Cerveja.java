@@ -1,0 +1,65 @@
+package br.com.fiap.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+
+@Entity
+@SequenceGenerator(allocationSize = 1, name = "seqCerveja", sequenceName = "SQ_T_CERVEJA")
+public class Cerveja {
+
+	@Id
+	@GeneratedValue(generator = "seqCerveja", strategy = GenerationType.SEQUENCE)
+	private int codigo;
+
+	private String nome;
+
+	private String marca;
+
+	private double valor;
+
+	private double teorAlcoolico;
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public double getValor() {
+		return valor;
+	}
+
+	public double getTeorAlcoolico() {
+		return teorAlcoolico;
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public void setValor(double valor) {
+		this.valor = valor;
+	}
+
+	public void setTeorAlcoolico(double teorAlcoolico) {
+		this.teorAlcoolico = teorAlcoolico;
+	}
+
+}

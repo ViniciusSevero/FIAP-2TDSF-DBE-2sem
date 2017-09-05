@@ -1,0 +1,45 @@
+package br.com.fiap.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import br.com.fiap.dao.BotecoDAO;
+import br.com.fiap.dao.CervejaDAO;
+import br.com.fiap.model.Cerveja;
+
+@Controller
+@RequestMapping("/cerveja")
+public class CervejaController {
+
+	@Autowired
+	private CervejaDAO dao;
+
+	@GetMapping("cadastrar")
+	public ModelAndView form() {
+		return new ModelAndView("cerveja/cadastro").addObject("cerveja", new Cerveja());
+	}
+
+	@Transactional
+	@PostMapping("cadastrar")
+	public ModelAndView processaForm(Cerveja cerveja) {
+		dao.cadastrar(cerveja);
+		dao.commit();
+		ModelAndView mv = new ModelAndView("cerveja/lista");
+		mv.addObject("cervejas", banco);
+		return mv;			
+	}
+
+	@GetMapping("listar")
+	public ModelAndView lista() {
+		return new ModelAndView("cerveja/lista").addObject("cervejas", dao.listar());
+	}
+
+}
