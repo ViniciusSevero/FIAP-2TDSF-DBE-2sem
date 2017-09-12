@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;cadastro.jsp&apos; to &apos;boteco&apos;&#x0D;&#x0A;- Original project: &apos;04-SpringMVC&apos;&#x0D;&#x0A;- Destination element: &apos;boteco&apos;&#x0D;&#x0A;- Original element: &apos;cadastro.jsp&apos;" description="Copy file" element1="WebContent/WEB-INF/jsp/boteco/cadastro.jsp" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1505217639945" target="/04-SpringMVC/WebContent/WEB-INF/jsp/boteco" units="0" version="1.0"/>
+</session>

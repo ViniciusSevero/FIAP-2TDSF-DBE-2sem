@@ -132,8 +132,8 @@
    <linked-el length="15" name="%8" offset="494" path="%1"/>
    <linked-el length="16" name="%9" offset="557" path="%1"/>
    <linked-el length="8" name="%10" offset="314" path="%11"/>
-   <linked-el length="18" name="%12" offset="529" path="%2"/>
-   <linked-el length="16" name="%13" offset="525" path="%1"/>
+   <linked-el length="16" name="%12" offset="525" path="%1"/>
+   <linked-el length="18" name="%13" offset="529" path="%2"/>
    <linked-el length="23" name="%14" offset="589" path="%1"/>
   </el>
  </validation>
@@ -145,16 +145,20 @@
   <alias path="boteco.entrada" value="%7"/>
   <alias path="cerveja.nome" value="%8"/>
   <alias path="title" value="%10"/>
-  <alias path="boteco.endereco" value="%12"/>
+  <alias path="boteco.endereco" value="%13"/>
   <alias path="cerveja.teorAlcolico" value="%14"/>
   <alias path="boteco.nome" value="%3"/>
   <alias path="cerveja" value="%5"/>
   <alias
    path="/04-SpringBoteco/WebContent/WEB-INF/jsp/cerveja/lista.jsp" value="%1"/>
   <alias path="cerveja.valor" value="%9"/>
-  <alias path="cerveja.marca" value="%13"/>
+  <alias path="cerveja.marca" value="%12"/>
   <alias path="/04-SpringBoteco/WebContent/WEB-INF/jsp/boteco/lista.jsp" value="%2"/>
  </aliases>
  <includes/>
- <uris/>
+ <uris>
+  <uri value="http://java.sun.com/jsp/jstl/core">
+   <prefix>c</prefix>
+  </uri>
+ </uris>
 </kb-project>

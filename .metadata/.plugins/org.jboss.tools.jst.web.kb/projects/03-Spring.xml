@@ -113,8 +113,6 @@
   <path value="C:/opensource/ApacheTomcat9/lib/tomcat-coyote.jar"/>
  </paths>
  <validation>
-  <core validator-id="jsf-verification"/>
-  <core validator-id="jboss.cdi.core"/>
   <el>
    <linked-el length="12" name="%0" offset="362" path="%1"/>
    <linked-el length="17" name="%2" offset="353" path="%3"/>

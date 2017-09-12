@@ -17,6 +17,7 @@
 					<th>Endereço</th>
 					<th>Taxa Serviço</th>
 					<th>Entrada</th>
+					<th></th>
 				</tr>
 			</thead>
 
@@ -28,6 +29,10 @@
 						<td>${item.endereco}</td>
 						<td>${item.taxaServico}</td>
 						<td>${item.entrada}</td>
+						<td>
+							<a href="<c:url value="/boteco/alterar/${item.codigo}" />">Editar</a>
+							<a href="<c:url value="/boteco/excluir/${item.codigo}" />">Excluir</a>
+						</td>
 					</tr>
 				</c:forEach>
 			</tbody>

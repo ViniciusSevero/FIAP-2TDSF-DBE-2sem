@@ -4,11 +4,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.fiap.dao.BotecoDAO;
+import br.com.fiap.exception.CodigoInvalidoException;
 import br.com.fiap.model.Boteco;
 
 @Controller
@@ -25,11 +28,10 @@ public class BotecoController {
 
 	@Transactional
 	@PostMapping("cadastrar")
-	public ModelAndView processarForm(Boteco boteco) {
+	public ModelAndView processarForm(Boteco boteco, RedirectAttributes redirect) {
 		dao.cadastrar(boteco);
-		ModelAndView retorno = new ModelAndView("boteco/lista");
-		retorno.addObject("botecos", dao.listar());
-		return retorno;
+		redirect.addFlashAttribute("msg", "Cadastrado!");
+		return new ModelAndView("redirect:/boteco/listar");
 	}
 	
 	@GetMapping("listar")
@@ -37,6 +39,34 @@ public class BotecoController {
 		ModelAndView retorno = new ModelAndView("boteco/lista");
 		retorno.addObject("botecos", dao.listar());
 		return retorno;
+	}
+	
+	@GetMapping("alterar/{id}")
+	public ModelAndView abrirFormEdicao(@PathVariable("id") int id){
+		ModelAndView retorno = new ModelAndView("boteco/alterar");
+		retorno.addObject("boteco", dao.buscar(id));
+		return retorno;
+	}
+	
+	@Transactional
+	@GetMapping("excluir/{id}")
+	public ModelAndView excluir(@PathVariable("id") int id, RedirectAttributes redirect){
+		try {
+			dao.excluir(id);
+			redirect.addFlashAttribute("msg", "Cadastrado!");
+		} catch (CodigoInvalidoException e) {
+			e.printStackTrace();
+			redirect.addFlashAttribute("msg", "Erro ao excluir!");
+		}
+		return new ModelAndView("redirect:/boteco/listar");
+	}
+	
+	@Transactional
+	@PostMapping("alterar")
+	public ModelAndView alterar(Boteco boteco, RedirectAttributes redirect) {
+		dao.atualizar(boteco);
+		redirect.addFlashAttribute("msg", "Cadastrado!");
+		return new ModelAndView("redirect:/boteco/listar");
 	}
 
 }
